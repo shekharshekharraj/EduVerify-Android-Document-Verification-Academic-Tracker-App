@@ -1,4 +1,4 @@
-# EduVerify – Android Document Verification & Academic Tracker App
+# EduVerify – Android Document Verification & Academic Tracker App// "Master Branch"
 
 EduVerify is a modular and scalable Android application built to simplify academic document verification and student record management. Designed using modern Android development practices, it provides a secure, seamless experience for students and administrators alike.
 
