@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Lottie background animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/lottie1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Upload Document"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- File name display -->
+            <TextView
+                android:id="@+id/tvFileName"
+                android:text="No file chosen"
+                android:textColor="#555555"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Scan Document -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScanDocument"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="Scan"
+                app:cornerRadius="12dp"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                app:icon="@drawable/ic_scan"
+                app:iconPadding="6dp"
+                app:iconTint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                app:layout_constraintTop_toBottomOf="@id/tvFileName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnChooseFile"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_marginTop="20dp" />
+
+            <!-- Choose File -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChooseFile"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:icon="@drawable/gallery"
+                android:text="Choose"
+                app:cornerRadius="12dp"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                app:layout_constraintTop_toTopOf="@+id/btnScanDocument"
+                app:layout_constraintStart_toEndOf="@+id/btnScanDocument"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <!-- Upload -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpload"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:icon="@drawable/upload"
+                android:text="Upload"
+                app:cornerRadius="12dp"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                app:layout_constraintTop_toBottomOf="@id/btnScanDocument"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/check"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_marginTop="16dp" />
+
+            <!-- Check -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/check"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:icon="@drawable/check"
+                android:text="Check"
+                app:cornerRadius="12dp"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                app:layout_constraintTop_toTopOf="@id/btnUpload"
+                app:layout_constraintStart_toEndOf="@id/btnUpload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <!-- Back Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackToMain"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text="Back"
+                app:cornerRadius="12dp"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/darker_gray"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/btnUpload"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Toggle Switch -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:alpha="0.0"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/btnBackToMain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Lottie Check Animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieViewCheck"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/switchToggle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/ivUploadedImage" />
+
+            <!-- Uploaded Image -->
+            <ImageView
+                android:id="@+id/ivUploadedImage"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Uploaded image"
+                app:layout_constraintTop_toBottomOf="@id/lottieViewCheck"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

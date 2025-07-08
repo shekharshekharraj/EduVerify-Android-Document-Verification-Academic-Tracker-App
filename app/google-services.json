@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "325682606517",
+    "project_id": "eduverify-1db67",
+    "storage_bucket": "eduverify-1db67.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325682606517:android:532e9c86c6a3ef2e67a9fc",
+        "android_client_info": {
+          "package_name": "com.example.eduverify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325682606517-oap7te3a1a8jq8pm5h5o5nv49ni5l9h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT9v-E94We6XJsKyPdd6RP9GT_9Gy44q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325682606517-oap7te3a1a8jq8pm5h5o5nv49ni5l9h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
